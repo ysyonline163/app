@@ -62,8 +62,23 @@
         console.log(time);
     })('join');
 
+    //================================ filter =====================================
+    (function(){
+        var arr = [1,2,3,4,5];
+        arr.filter(function( index, item ){
+            console.log( "index:" + index + "--" +"item:" +item );
+            return item > 3;
+        });
+        console.log("filter==>"+arr);
+    })('filter');
 
-
-
-
+    //================================ map =====================================
+    (function () {
+        var arr = [1,2,3,4,5];
+        arr.map(function( index, item ){
+            console.log( "index" + index + "--" + " item:" + item );
+            return item + 2;
+        });
+        console.log("map==>" + arr );
+    })('map');
 })({});
